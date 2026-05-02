@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# 📢 Campus Notification System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack notification system built with React and Node.js that displays prioritized campus notifications with filtering, pagination, and centralized logging.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔥 **Top Priority Notifications**
+  - Ranked using custom priority logic:
+    - Placement > Result > Event
+    - Latest notifications first
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📋 **All Notifications View**
+  - Displays all fetched notifications
+  - Read / Unread state handling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🎯 **Filtering**
+  - Filter by notification type:
+    - Event
+    - Result
+    - Placement
 
-### `npm test`
+- 📄 **Pagination**
+  - Navigate through pages of notifications
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ **Mark as Read / Mark All Read**
 
-### `npm run build`
+- 🌙 **Dark Mode Support**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 📊 **Unread Notification Counter**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 🧠 **Logging Middleware**
+  - Logs:
+    - API calls
+    - User actions
+    - State updates
+    - Errors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🏗️ Architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React Frontend → Node.js Backend (Proxy) → External API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Frontend (React)**
+  - UI rendering
+  - State management
+  - User interactions
 
-## Learn More
+- **Backend (Node.js)**
+  - Acts as proxy to avoid CORS issues
+  - Forwards API requests securely
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Logging Middleware**
+  - Centralized logging system used across the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠️ Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- React.js
+- Material UI
+- Node.js (Express)
+- Axios
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚙️ Setup Instructions
 
-### Making a Progressive Web App
+### 1️⃣ Clone the repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_ROLL_NUMBER.git
+cd YOUR_ROLL_NUMBER
+2️⃣ Start Backend
+cd backend
+npm install
+node server.js
 
-### Advanced Configuration
+Backend runs on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+http://localhost:5000
+3️⃣ Start Frontend
+cd notification_app_fe
+npm install
+npm start
 
-### Deployment
+Frontend runs on:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+http://localhost:3000
+🔐 Credentials
 
-### `npm run build` fails to minify
+Replace the following placeholders in the code before running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+YOUR_EMAIL
+YOUR_CLIENT_ID
+YOUR_CLIENT_SECRET
+YOUR_ACCESS_CODE
+📸 Screenshots
+
+Screenshots demonstrating:
+
+UI layout
+Top notifications
+Filtering
+Pagination
+Network/API calls
+Logging
+
+Available in the screenshots/ folder.
+
+📂 Project Structure
+YOUR_ROLL_NUMBER/
+├── notification_app_fe/
+├── backend/
+├── screenshots/
+├── notification_system_design.md
+└── README.md
+🧠 Key Highlights
+Clean modular architecture
+Reusable logging middleware
+Priority-based sorting logic
+Responsive and user-friendly UI
+Proper error handling and state management
+⚠️ Notes
+node_modules are excluded
+Sensitive credentials are not included
+Backend proxy is required to handle CORS
+👨‍💻 Author
+
+Your Name
+Roll Number: YOUR_ROLL_NUMBER
